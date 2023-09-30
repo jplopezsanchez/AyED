@@ -1,7 +1,6 @@
 #include <iostream>
+double CPi(int x); 
 using namespace std;
-double CPi(int x); // x es el numero de iteraciones
-
  
 //Función CPi (cuenta de pi): calcula el número PI a partir de una sucesión de términos 
 
@@ -29,9 +28,16 @@ int main(void)
  
 {
     double PI; // valor de pi
+  int x {0};
   
-    PI = CPi (100000000);
-    cout.precision (8); //para que esten los primeros seis decimales bien tuve que agrgar uno mas porque si no el programa lo redondea
+    PI = CPi (x);
+  
+  while (PI != 3.141592) // correccion del tp anterior ahora la pausa se hace mediante un while
+    {
+      x ++;
+    }
+    
+    cout.precision (7); //para que esten los primeros seis decimales 
     cout << "El valor del numero PI es: " << PI << endl;
  
 
